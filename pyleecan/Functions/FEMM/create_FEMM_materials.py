@@ -94,7 +94,7 @@ def create_FEMM_materials(
             if mat_name not in materials:
                 # magnetic permeability
                 femm.mi_addmaterial(
-                    mat_name, mu_is, mu_is, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0
+                    mat_name, mu_is, mu_is, 0, 0, 0, 0, 0, lam_obj.Kf1, 0, 0, 0, 0, 0
                 )
                 if type_BH_stator == 0:
                     BHs = lam_obj.mat_type.mag.get_BH()
@@ -113,7 +113,7 @@ def create_FEMM_materials(
             if mat_name not in materials:
                 # magnetic permeability
                 femm.mi_addmaterial(
-                    mat_name, mu_ir, mu_ir, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0
+                    mat_name, mu_ir, mu_ir, 0, 0, 0, 0, 0, lam_obj.Kf1, 0, 0, 0, 0, 0
                 )
                 if type_BH_rotor == 0:
                     BHr = lam_obj.mat_type.mag.get_BH()
